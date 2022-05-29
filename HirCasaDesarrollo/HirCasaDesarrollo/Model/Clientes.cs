@@ -16,12 +16,12 @@ namespace HirCasaDesarrollo.Model
     {
         public int ClienteId { get; set; }
         public string Nombre { get; set; }
-        public Nullable<int> Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Correo { get; set; }
-        public Nullable<int> Edad { get; set; }
-        public Nullable<decimal> MontoSolicitud { get; set; }
+        public int Edad { get; set; }
+        public string MontoSolicitud { get; set; }
         public string Estatus { get; set; }
-        public Nullable<int> Aprobación { get; set; }
-        public Nullable<System.DateTime> FechaAlta { get; set; }
+        public int Aprobacion { get; set; }
+        public System.DateTime FechaAlta { get; set; }
     }
 }

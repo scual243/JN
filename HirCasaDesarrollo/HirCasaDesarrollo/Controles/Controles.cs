@@ -12,18 +12,18 @@ namespace HirCasaDesarrollo.Controles
         public static void GetClientes()
         {
             string path = @"C:\Users\Personal1\Documents\Jaina\Reclutamiento\datosClientes.xlsx";
-            List<Clientes> objListClientes = new List<Clientes>();
+            List<OClientes> objListClientes = new List<OClientes>();
             if (File.Exists(path))
             {
-
-
                 objListClientes = Consultas.Consultas.getDataExcelClientes(path);
                 Console.WriteLine("valor i" + objListClientes.Count());
                 foreach (var i in objListClientes)
                 {
-                    Funciones.Funciones.insertClient(i);
-
-                }
+                    if (i != null)
+                    {
+                       Funciones.Funciones.insertClient(i);
+                    }
+               }
             }
             else
             {

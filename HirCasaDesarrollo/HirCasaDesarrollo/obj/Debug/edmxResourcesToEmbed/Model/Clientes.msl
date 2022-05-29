@@ -21,7 +21,7 @@
           <ScalarProperty Name="Edad" ColumnName="Edad" />
           <ScalarProperty Name="MontoSolicitud" ColumnName="MontoSolicitud" />
           <ScalarProperty Name="Estatus" ColumnName="Estatus" />
-          <ScalarProperty Name="Aprobación" ColumnName="Aprobación" />
+          <ScalarProperty Name="Aprobacion" ColumnName="Aprobacion" />
           <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
         </MappingFragment>
       </EntityTypeMapping>

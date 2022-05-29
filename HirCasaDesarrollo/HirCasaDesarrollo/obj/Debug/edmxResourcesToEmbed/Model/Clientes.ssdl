@@ -14,14 +14,14 @@
       <PropertyRef Name="ClienteId" />
     </Key>
     <Property Name="ClienteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="nchar" MaxLength="50" />
-    <Property Name="Telefono" Type="int" />
-    <Property Name="Correo" Type="nchar" MaxLength="50" />
-    <Property Name="Edad" Type="int" />
-    <Property Name="MontoSolicitud" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="Estatus" Type="nchar" MaxLength="20" />
-    <Property Name="Aprobación" Type="int" />
-    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="Nombre" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefono" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Correo" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Edad" Type="int" Nullable="false" />
+    <Property Name="MontoSolicitud" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estatus" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Aprobacion" Type="int" Nullable="false" />
+    <Property Name="FechaAlta" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Pagos">
     <Key>

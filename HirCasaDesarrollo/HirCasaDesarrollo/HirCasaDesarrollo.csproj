@@ -86,7 +86,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Clientes.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\Modelos.cs" />
     <Compile Include="Model\Pagos.cs">
       <DependentUpon>Clientes.tt</DependentUpon>
     </Compile>
@@ -107,8 +107,8 @@
   <ItemGroup>
     <Content Include="Model\Clientes.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Clientes.Context.cs</LastGenOutput>
       <DependentUpon>Clientes.edmx</DependentUpon>
+      <LastGenOutput>Clientes.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\Clientes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

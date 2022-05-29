@@ -14,33 +14,24 @@ namespace HirCasaDesarrollo.Funciones
 {
     public class Funciones
     {
-        public static void insertClient(Clientes obj)
+        public static void insertClient(OClientes obj)
         {
+            Console.WriteLine(Funciones.Serialize(obj));
+            Console.ReadKey();
             ClientesEntities context = new ClientesEntities();
 
-            int aprobacion = Moneda(obj.Aprobación);
-            ClientesDb cliente = new ClientesDb();
-            cliente.ClienteId = int.Parse(obj.ClienteId);
-            cliente.Nombre = obj.Nombre;
-            cliente.Telefono = Int32.Parse(LimpiaCadena(obj.Telefono));
-            cliente.Correo = obj.Correo;
-            cliente.Edad = int.Parse(obj.Edad);
-            cliente.MontoSolicitud = Convert.ToDecimal(LimpiaCadena(obj.MontoSolicitud));
-            cliente.Estatus = obj.Estatus;
- 
-            cliente.FechaAlta = DateTime.Parse(obj.FechaAlta);
-
-            Model.Clientes objCliente = new Model.Clientes();
-            //objCliente.ClienteId = cliente.ClienteId;
-            objCliente.Nombre = LimpiaEspacio(cliente.Nombre);
-            objCliente.Telefono = cliente.Telefono;
-            objCliente.Correo = cliente.Correo;
-            objCliente.Edad = cliente.Edad;
-            objCliente.MontoSolicitud = cliente.MontoSolicitud;
-            objCliente.Estatus = cliente.Estatus;
-            objCliente.Aprobación = aprobacion;
-            objCliente.FechaAlta = cliente.FechaAlta;
-
+            var objCliente = new Clientes()
+            {
+                ClienteId = Int32.Parse(obj.ClienteId),
+                Nombre = LimpiaEspacio(obj.Nombre),
+                Telefono = obj.Telefono,
+                Correo = obj.Correo,
+                Edad = Int32.Parse(obj.Edad),
+                MontoSolicitud = obj.MontoSolicitud,
+                Estatus = obj.Estatus,
+                Aprobacion = ValidaAprobacion(obj.Aprobacion),
+                FechaAlta = DateTime.Now,
+            };
 
             context.Clientes.Add(objCliente);
             context.SaveChanges();
@@ -53,7 +44,7 @@ namespace HirCasaDesarrollo.Funciones
             text = Regex.Replace(text, @"\s+", " ").Trim();
             return text;
         }
-        public static int Moneda(string valor)
+        public static int ValidaAprobacion(string valor)
         {
             int respuesta = 0;//int.MaxValue;
             try

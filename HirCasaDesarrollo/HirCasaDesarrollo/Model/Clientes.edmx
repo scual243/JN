@@ -19,14 +19,14 @@
             <PropertyRef Name="ClienteId" />
           </Key>
           <Property Name="ClienteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="nchar" MaxLength="50" />
-          <Property Name="Telefono" Type="int" />
-          <Property Name="Correo" Type="nchar" MaxLength="50" />
-          <Property Name="Edad" Type="int" />
-          <Property Name="MontoSolicitud" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="Estatus" Type="nchar" MaxLength="20" />
-          <Property Name="Aprobación" Type="int" />
-          <Property Name="FechaAlta" Type="datetime" />
+          <Property Name="Nombre" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefono" Type="nchar" MaxLength="15" Nullable="false" />
+          <Property Name="Correo" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Edad" Type="int" Nullable="false" />
+          <Property Name="MontoSolicitud" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Estatus" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Aprobacion" Type="int" Nullable="false" />
+          <Property Name="FechaAlta" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Pagos">
           <Key>
@@ -62,14 +62,14 @@
             <PropertyRef Name="ClienteId" />
           </Key>
           <Property Name="ClienteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="Telefono" Type="Int32" />
-          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="Edad" Type="Int32" />
-          <Property Name="MontoSolicitud" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Estatus" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
-          <Property Name="Aprobación" Type="Int32" />
-          <Property Name="FechaAlta" Type="DateTime" Precision="3" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Edad" Type="Int32" Nullable="false" />
+          <Property Name="MontoSolicitud" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Estatus" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Aprobacion" Type="Int32" Nullable="false" />
+          <Property Name="FechaAlta" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="Pagos">
           <Key>
@@ -112,7 +112,7 @@
                 <ScalarProperty Name="Edad" ColumnName="Edad" />
                 <ScalarProperty Name="MontoSolicitud" ColumnName="MontoSolicitud" />
                 <ScalarProperty Name="Estatus" ColumnName="Estatus" />
-                <ScalarProperty Name="Aprobación" ColumnName="Aprobación" />
+                <ScalarProperty Name="Aprobacion" ColumnName="Aprobacion" />
                 <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
               </MappingFragment>
             </EntityTypeMapping>
