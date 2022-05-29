@@ -1,0 +1,18 @@
+﻿Código libre;
+LinqToExcel
+
+Adición desde la consolada de paquetes Nuget
+
+https://www.nuget.org/packages/LinqToExcel/
+
+Install-Package LinqToExcel -Version 1.11.0
+
+
+Compilación a 64 bit con AnyDebug
+
+Herramientas adicionales:
+accessdatabaseengine_X64.exe para paqueteria de Microsoft.ACE.OLEDB.12.0
+
+Referencias:
+
+https://community.powerbi.com/t5/Translated-Spanish-Desktop/Microsoft-Access-El-proveedor-Microsoft-ACE-OLEDB-12-0-no-est%C3%A1/td-p/2078330
